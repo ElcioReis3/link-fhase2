@@ -17,11 +17,7 @@ export const Main = () => {
   const phone: phoneType[] = [{ phoneOne: 86998271900, phoneTwo: 86998012172 }];
   const instagram: string = "fhase2.uniformes";
   const email: string = "fhase2@hotmail.com";
-  const message: string = `Olá! 👋 Seja bem-vindo(a) à Fhase2 Uniformes.
-Em que posso te ajudar hoje?\n
-👕 Uniformes personalizados\n
-🏢 Atendimento corporativo, escolar, fitness e muito mais\n
-📦 Entregamos para todo o Brasil!`;
+  const message: string = `Olá! Gostaria de realizar um orçamento.`;
   const encodedMessage = encodeURIComponent(message);
   const pageSite: string | null = null;
 
@@ -122,7 +118,7 @@ Em que posso te ajudar hoje?\n
           {publicos.map((item, index) => (
             <Alert
               key={index}
-              className="bg-red-700 text-white opacity-90 hover:opacity-100"
+              className="bg-red-700 text-white opacity-90 hover:opacity-100 active:opacity-100 "
             >
               <AlertTitle>{item}</AlertTitle>
             </Alert>
