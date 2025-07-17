@@ -1,5 +1,6 @@
 "use client";
 import {
+  BadgePercent,
   Bus,
   Fuel,
   Gift,
@@ -9,21 +10,15 @@ import {
   MailIcon,
   Sparkle,
   UtensilsIcon,
-  Wand,
+  Dumbbell,
+  Building2,
+  HardHat,
 } from "lucide-react";
 import { Separator } from "../ui/separator";
 import { CustomIcon } from "../ui/customIconWhats";
 import { InstagramIcon } from "../ui/instagramIcon";
 import { DynamicButtons } from "../DynamicButtons";
 import { Alert, AlertTitle } from "../ui/alert";
-import {
-  Briefcase,
-  Dumbbell,
-  School,
-  Building2,
-  HardHat,
-  Utensils,
-} from "lucide-react";
 
 type phoneType = {
   phoneOne: number;
@@ -132,6 +127,10 @@ export const Main = () => {
     {
       titulo: "Instituições Públicas",
       icone: Landmark,
+    },
+    {
+      titulo: "Setor Promocional",
+      icone: BadgePercent,
     },
   ];
 
