@@ -1,10 +1,29 @@
 "use client";
-import { Globe, MailIcon } from "lucide-react";
+import {
+  Bus,
+  Fuel,
+  Gift,
+  Globe,
+  GraduationCap,
+  Landmark,
+  MailIcon,
+  Sparkle,
+  UtensilsIcon,
+  Wand,
+} from "lucide-react";
 import { Separator } from "../ui/separator";
 import { CustomIcon } from "../ui/customIconWhats";
 import { InstagramIcon } from "../ui/instagramIcon";
 import { DynamicButtons } from "../DynamicButtons";
-import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
+import { Alert, AlertTitle } from "../ui/alert";
+import {
+  Briefcase,
+  Dumbbell,
+  School,
+  Building2,
+  HardHat,
+  Utensils,
+} from "lucide-react";
 
 type phoneType = {
   phoneOne: number;
@@ -74,15 +93,46 @@ export const Main = () => {
   ];
 
   const publicos = [
-    "Academias",
-    "Escolas",
-    "Setor Promocional",
-    "Setor gastronômico",
-    "Construtoras",
-    "Postos Combustíveis",
-    "Transportadoras",
-    "Salão de Beleza",
-    "Instituições Públicas",
+    {
+      titulo: "Brindes e Itens Promocional",
+      icone: Gift,
+    },
+    {
+      titulo: "Esportivo e Fitness",
+      icone: Dumbbell,
+    },
+    {
+      titulo: "Escolar",
+      icone: GraduationCap,
+    },
+    {
+      titulo: "Corporativo e Administrativo",
+      icone: Building2,
+    },
+    {
+      titulo: "Industrial e Contrução Civil",
+      icone: HardHat,
+    },
+    {
+      titulo: "Alimentação e Gastronomia",
+      icone: UtensilsIcon,
+    },
+    {
+      titulo: "Limpeza e Serviços Gerais",
+      icone: Sparkle,
+    },
+    {
+      titulo: "Transportadora",
+      icone: Bus,
+    },
+    {
+      titulo: "Posto",
+      icone: Fuel,
+    },
+    {
+      titulo: "Instituições Públicas",
+      icone: Landmark,
+    },
   ];
 
   return (
@@ -90,9 +140,9 @@ export const Main = () => {
       <div className="max-w-xl w-full bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl p-6 flex flex-col items-center gap-4">
         <div className="relative w-full flex items-center justify-center mb-7">
           {/* Banner atrás da imagem */}
-          <div className="absolute top-1/2 -translate-y-1/2 w-full h-64 bg-red-700 rounded-xl z-0"></div>
+          <div className="absolute top-1/2 -translate-y-1/2 w-full h-64 bg-black rounded-xl z-0"></div>
 
-          <div className="w-60 h-60 rounded-full border-4 overflow-hidden z-10 p-7 bg-black">
+          <div className="w-60 h-60 rounded-xs overflow-hidden z-10 p-7">
             <img
               src="/images/logo.png"
               alt="Logo"
@@ -114,13 +164,14 @@ export const Main = () => {
         <DynamicButtons buttons={buttons} />
         <Separator />
 
-        <div className="w-full grid md:grid-cols-2 gap-x-4 gap-y-1 text-sm ml-4 xs:grid-cols-1">
+        <div className="w-full grid md:grid-cols-2 gap-x-2 gap-y-1 text-sm ml-4 xs:grid-cols-1">
           {publicos.map((item, index) => (
             <Alert
               key={index}
-              className="bg-red-700 text-white opacity-90 hover:opacity-100 active:opacity-100 "
+              className="bg-red-700 text-white opacity-90 hover:opacity-100 active:opacity-100 flex items-center gap-2"
             >
-              <AlertTitle>{item}</AlertTitle>
+              <item.icone className="w-4 h-4" />
+              <AlertTitle>{item.titulo}</AlertTitle>
             </Alert>
           ))}
         </div>
