@@ -6,6 +6,22 @@ import { Poppins } from "next/font/google";
 export const metadata: Metadata = {
   title: "Página de links",
   description: "Clique em nossos links e conheça-nos.",
+  openGraph: {
+    title: "Página de links",
+    description: "Clique em nossos links e conheça-nos.",
+    url: "https://fhase2-uniformes-e-fardamentos.netlify.app/",
+    siteName: "Fhase2 Uniformes",
+    images: [
+      {
+        url: "https://fhase2-uniformes-e-fardamentos.netlify.app/images/logo.png", // imagem de destaque
+        width: 1200,
+        height: 630,
+        alt: "Imagem de capa para compartilhamento",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 const poppins = Poppins({
