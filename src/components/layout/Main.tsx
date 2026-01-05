@@ -19,6 +19,12 @@ import { CustomIcon } from "../ui/customIconWhats";
 import { InstagramIcon } from "../ui/instagramIcon";
 import { DynamicButtons } from "../DynamicButtons";
 import { Alert, AlertTitle } from "../ui/alert";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion";
 
 type phoneType = {
   phoneOne: number;
@@ -181,6 +187,35 @@ export const Main = () => {
           <span>Dados da empresa</span>
           <span>Nome: Fhase2 uniformes ltda</span>
           <span>CNPJ: 55.307.842/000-82</span>
+        </div>
+
+        <Separator />
+        <div className="w-full">
+          <div className="text-center">EMPRESAS PARCEIRA</div>
+
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>
+                <h1
+                  className="text-center"
+                  onClick={() =>
+                    window.open(
+                      "https://rc-solucoes-produtos-limpeza.netlify.app/",
+                      "_blank"
+                    )
+                  }
+                >
+                  RC Soluções
+                </h1>
+              </AccordionTrigger>
+              <AccordionContent>
+                <iframe
+                  src="https://rc-solucoes-produtos-limpeza.netlify.app/"
+                  className="w-full overflow-hidden h-48 rounded-lg border-0 mt-2"
+                ></iframe>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
     </div>
