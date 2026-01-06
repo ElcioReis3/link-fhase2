@@ -191,13 +191,13 @@ export const Main = () => {
 
         <Separator />
         <div className="w-full">
-          <div className="text-center">EMPRESAS PARCEIRA</div>
+          <div className="text-center font-bold">EMPRESAS PARCEIRA</div>
 
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
               <AccordionTrigger>
                 <h1
-                  className="text-center"
+                  className="text-center underline"
                   onClick={() =>
                     window.open(
                       "https://rc-solucoes-produtos-limpeza.netlify.app/",
